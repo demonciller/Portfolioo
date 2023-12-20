@@ -117,19 +117,19 @@
             <h1 class="sub-title">My Work</h1>
             <div class="work-list">
                 <div class="work">
-                    <img src="./move with joy/move with joy.png">
+                    <img src="./car landing page/landing.png">
                     <div class="layer">
-                        <h3>Web Site For Move</h3>
-                        <p>If you're looking to create a website for a moving service or a platform related to moving items, here are some key elements and features you might consider incorporating into your website</p>
-                        <a href="./move with joy/ciller.html"><ion-icon name="link"></ion-icon></a>
+                        <h3>Car Landing Page</h3>
+                        <p>Project for Landing Pages</p>
+                        <a href="./car landing page/index.html"><ion-icon name="link"></ion-icon></a>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="./tindog/tindog.png">
+                    <img src="./login-form/login.png">
                     <div class="layer">
-                        <h3>Tinder For Dogs</h3>
-                        <p>Meet new and interesting dogs nearby.</p>
-                        <a href="./tindog/index.html"><ion-icon name="link"></ion-icon></a>
+                        <h3>Modern Login-Form</h3>
+                        <p>Glass Login Form With modern colors</p>
+                        <a href="./login-form/index.html"><ion-icon name="link"></ion-icon></a>
                     </div>
                 </div>
                 <div class="work">
@@ -154,6 +154,14 @@
                         <h3>Camera Landing Page</h3>
                         <p>Landing Page For Product "Camera"</p>
                         <a href="./camera landing page/landcamera.html"><ion-icon name="link"></ion-icon></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./tindog/tindog.png">
+                    <div class="layer">
+                        <h3>Tin dog</h3>
+                        <p>Website for Meeting Dogs and can play together</p>
+                        <a href="./tindog/index.html"><ion-icon name="link"></ion-icon></a>
                     </div>
                 </div>
               
@@ -186,12 +194,13 @@
                 </div>
             </div>
             <div class="contact-right">
-                <form>
-                    <input type="text" name="" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <form name="submit-to-google-sheet">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <textarea id="message" rows="6" placeholder="How can i help you "></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
@@ -214,7 +223,23 @@ function closemenu(){
     
 </script>
 
-
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwYvEn7tavj0BCE06HvFGuSK98Y6ZeGalutBZPSE5er5AiKA5yCRvikgxsCWXjcpFuw7w/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+        form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
 
 

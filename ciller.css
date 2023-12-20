@@ -323,6 +323,7 @@ nav ul .btnLogin-popup:hover{
     
 }
 
+
 .work{
     border-radius: 10px;
     overflow: hidden;
@@ -569,4 +570,10 @@ nav .fa-solid{
       .copy-right{
         font-size: 14px;
       }
+}
+
+#msg{
+    color: #61b752;
+    margin-top: -20px;
+    display: block;
 }
