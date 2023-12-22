@@ -486,17 +486,21 @@ nav .fa-solid{
   
 
 @media only screen and (max-width: 1023px){
-    .img-3{
-        display: none;
-    }
 
     .img-4{
         display: none;
     }
 
+
+
     .header-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         font-size: 23px;
-        margin-top: 50%;
+        margin-top: 40%;
 
     }
 
@@ -504,6 +508,10 @@ nav .fa-solid{
         font-size: 30px;
     }
 
+    .header-text p{
+        font-size: 30px;
+    }
+    
     nav .fa-solid{
         display: block;
         font-size: 25px;   
