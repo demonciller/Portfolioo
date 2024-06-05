@@ -141,8 +141,8 @@ nav ul .btnLogin-popup:hover{
 
 
 .img-4{
-    width: 40%;
-    height: 70%;
+    width: 35%;
+    height: 65%;
     position: absolute;
     bottom: 0;
     right: 100px;
@@ -159,7 +159,6 @@ nav ul .btnLogin-popup:hover{
     transform: translateX(-50%);
     transition: bottom 1s, left 1s;
     bottom: 200px;
-
 }
 
 .img-4 .me{
@@ -173,7 +172,7 @@ nav ul .btnLogin-popup:hover{
 }
 
 .img-4:hover .shape{
-    bottom: 80px;
+    bottom: 100px;
 }
 /* ---------------------about------------------ */
 
@@ -579,6 +578,8 @@ nav .fa-solid{
         font-size: 14px;
       }
 }
+
+
 
 #msg{
     color: #61b752;
